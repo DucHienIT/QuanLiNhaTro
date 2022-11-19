@@ -1,0 +1,12 @@
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\QLPhongtroV2\QLPhongtro-master\MotelRoomManagement\MRDTO\bin\Debug\MRDTO.dll
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\QLPhongtroV2\QLPhongtro-master\MotelRoomManagement\MRDTO\bin\Debug\MRDTO.pdb
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\QLPhongtroV2\QLPhongtro-master\MotelRoomManagement\MRDTO\obj\Debug\MRDTO.csproj.AssemblyReference.cache
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\QLPhongtroV2\QLPhongtro-master\MotelRoomManagement\MRDTO\obj\Debug\MRDTO.csproj.CoreCompileInputs.cache
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\QLPhongtroV2\QLPhongtro-master\MotelRoomManagement\MRDTO\obj\Debug\MRDTO.dll
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\QLPhongtroV2\QLPhongtro-master\MotelRoomManagement\MRDTO\obj\Debug\MRDTO.pdb
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\QLPhongtroV4\QLPhongtro-master\MotelRoomManagement\MRDTO\bin\Debug\MRDTO.dll
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\QLPhongtroV4\QLPhongtro-master\MotelRoomManagement\MRDTO\bin\Debug\MRDTO.pdb
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\QLPhongtroV4\QLPhongtro-master\MotelRoomManagement\MRDTO\obj\Debug\MRDTO.csproj.AssemblyReference.cache
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\QLPhongtroV4\QLPhongtro-master\MotelRoomManagement\MRDTO\obj\Debug\MRDTO.csproj.CoreCompileInputs.cache
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\QLPhongtroV4\QLPhongtro-master\MotelRoomManagement\MRDTO\obj\Debug\MRDTO.dll
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\QLPhongtroV4\QLPhongtro-master\MotelRoomManagement\MRDTO\obj\Debug\MRDTO.pdb
