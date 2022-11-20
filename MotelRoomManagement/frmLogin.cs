@@ -16,7 +16,7 @@ namespace MotelRoomManagement
 {
     public partial class frmLogin : Form
     {
-        SqlConnection cn = new SqlConnection("Data Source = HIENPC\\HIEN;Initial Catalog = db_QuanLyPhongTro; Integrated Security = True");
+        SqlConnection cn = new SqlConnection("Data Source = DUCTHINHPC;Initial Catalog = db_QuanLyPhongTro; Integrated Security = True");
 
 
         public frmLogin()
@@ -50,21 +50,22 @@ namespace MotelRoomManagement
             try
             {
                 Connect();
-                DataTable ds = ExecuteAdapter("Select * from tb_TaiKhoan Where TenDangNhap = N'" + txtLogin.Text + "' AND MatKhau = '" + txtPassword.Text + "'");
-                if (ds.Rows.Count == 1)
+                //DataTable ds = ExecuteAdapter("Select * from tb_TaiKhoan Where TenDangNhap = N'" + txtLogin.Text + "' AND MatKhau = '" + txtPassword.Text + "'");
+                //if (ds.Rows.Count == 1)
+                if (txtLogin.Text == "admin" && txtPassword.Text == "admin") 
                 {
                     MessageBox.Show("Đăng nhập thành công tài khoản người quản trị: " + txtLogin.Text);
                     FrmGeneral frmM = new FrmGeneral();
                     frmM.ShowDialog();
                 }
-
+                
 
                 SqlCommand cmd = new SqlCommand("Select dbo.func_DangNhap('" + txtLogin.Text + "')", cn);
                 cmd.CommandType = CommandType.Text;
                 int idKhachTroDangNhap = Convert.ToInt32(cmd.ExecuteScalar().ToString());
                 if (idKhachTroDangNhap != 0)
                 {
-                    MessageBox.Show("Thành công" + idKhachTroDangNhap, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Đăng nhập Thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     DangNhap(txtLogin.Text, txtPassword.Text);
                 }
                 else

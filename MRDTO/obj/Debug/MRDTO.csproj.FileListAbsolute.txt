@@ -10,3 +10,9 @@ D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\QLPhongtroV4\QLPhongtro-master\Motel
 D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\QLPhongtroV4\QLPhongtro-master\MotelRoomManagement\MRDTO\obj\Debug\MRDTO.csproj.CoreCompileInputs.cache
 D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\QLPhongtroV4\QLPhongtro-master\MotelRoomManagement\MRDTO\obj\Debug\MRDTO.dll
 D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\QLPhongtroV4\QLPhongtro-master\MotelRoomManagement\MRDTO\obj\Debug\MRDTO.pdb
+C:\Users\PC\OneDrive\Máy tính\repo Motel management\QuanLiNhaTro\MRDTO\bin\Debug\MRDTO.dll
+C:\Users\PC\OneDrive\Máy tính\repo Motel management\QuanLiNhaTro\MRDTO\bin\Debug\MRDTO.pdb
+C:\Users\PC\OneDrive\Máy tính\repo Motel management\QuanLiNhaTro\MRDTO\obj\Debug\MRDTO.csproj.AssemblyReference.cache
+C:\Users\PC\OneDrive\Máy tính\repo Motel management\QuanLiNhaTro\MRDTO\obj\Debug\MRDTO.csproj.CoreCompileInputs.cache
+C:\Users\PC\OneDrive\Máy tính\repo Motel management\QuanLiNhaTro\MRDTO\obj\Debug\MRDTO.dll
+C:\Users\PC\OneDrive\Máy tính\repo Motel management\QuanLiNhaTro\MRDTO\obj\Debug\MRDTO.pdb

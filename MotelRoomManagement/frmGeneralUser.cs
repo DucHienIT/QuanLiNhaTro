@@ -29,7 +29,7 @@ namespace MotelRoomManagement
 
         private void frmGeneralUser_Load(object sender, EventArgs e)
         {
-            connString = "Server=HIENPC\\HIEN;Database=db_QuanLyPhongTro;User Id=" + tendangnhap + ";Password=" + matkhau + ";";
+            connString = "Server=DUCTHINHPC;Database=db_QuanLyPhongTro;User Id=" + tendangnhap + ";Password=" + matkhau + ";";
             conn = new SqlConnection(connString); ;
             try
             {

@@ -16,3 +16,12 @@ D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\QLPhongtroV4\QLPhongtro-master\Motel
 D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\QLPhongtroV4\QLPhongtro-master\MotelRoomManagement\MRDAO\bin\Debug\MRDTO.dll
 D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\QLPhongtroV4\QLPhongtro-master\MotelRoomManagement\MRDAO\bin\Debug\MRDTO.pdb
 D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\QLPhongtroV4\QLPhongtro-master\MotelRoomManagement\MRDAO\obj\Debug\MRDAO.csproj.CopyComplete
+C:\Users\PC\OneDrive\Máy tính\repo Motel management\QuanLiNhaTro\MRDAO\bin\Debug\MRDAO.dll
+C:\Users\PC\OneDrive\Máy tính\repo Motel management\QuanLiNhaTro\MRDAO\bin\Debug\MRDAO.pdb
+C:\Users\PC\OneDrive\Máy tính\repo Motel management\QuanLiNhaTro\MRDAO\bin\Debug\MRDTO.dll
+C:\Users\PC\OneDrive\Máy tính\repo Motel management\QuanLiNhaTro\MRDAO\bin\Debug\MRDTO.pdb
+C:\Users\PC\OneDrive\Máy tính\repo Motel management\QuanLiNhaTro\MRDAO\obj\Debug\MRDAO.csproj.AssemblyReference.cache
+C:\Users\PC\OneDrive\Máy tính\repo Motel management\QuanLiNhaTro\MRDAO\obj\Debug\MRDAO.csproj.CoreCompileInputs.cache
+C:\Users\PC\OneDrive\Máy tính\repo Motel management\QuanLiNhaTro\MRDAO\obj\Debug\MRDAO.csproj.CopyComplete
+C:\Users\PC\OneDrive\Máy tính\repo Motel management\QuanLiNhaTro\MRDAO\obj\Debug\MRDAO.dll
+C:\Users\PC\OneDrive\Máy tính\repo Motel management\QuanLiNhaTro\MRDAO\obj\Debug\MRDAO.pdb
