@@ -30,12 +30,28 @@
         {
             this.grDSTT = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lvHoaDonThanhToanDu = new System.Windows.Forms.ListView();
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lvLanThanhToan = new System.Windows.Forms.ListView();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.grCTHD = new System.Windows.Forms.GroupBox();
-            this.lbTT = new System.Windows.Forms.Label();
+            this.lbTongTienHoaDon = new System.Windows.Forms.Label();
+            this.lbTTCon = new System.Windows.Forms.Label();
             this.line1 = new DevComponents.DotNetBar.Controls.Line();
-            this.lbTongTien = new System.Windows.Forms.Label();
+            this.lbTongTienConLai = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.lbTienNuoc = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -58,8 +74,11 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.grDSTT.SuspendLayout();
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lbTT = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.grCTHD.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -72,14 +91,13 @@
             // 
             this.grDSTT.CanvasColor = System.Drawing.SystemColors.Control;
             this.grDSTT.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.grDSTT.Controls.Add(this.panel1);
             this.grDSTT.DisabledBackColor = System.Drawing.Color.Empty;
             this.grDSTT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grDSTT.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grDSTT.Location = new System.Drawing.Point(0, 0);
             this.grDSTT.Margin = new System.Windows.Forms.Padding(4);
             this.grDSTT.Name = "grDSTT";
-            this.grDSTT.Size = new System.Drawing.Size(1341, 692);
+            this.grDSTT.Size = new System.Drawing.Size(1780, 773);
             // 
             // 
             // 
@@ -114,26 +132,158 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.grCTHD);
+            this.panel1.Controls.Add(this.groupBox3);
+            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.groupBox6);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(17, 52);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1335, 642);
+            this.panel1.Size = new System.Drawing.Size(1743, 696);
             this.panel1.TabIndex = 0;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.lvHoaDonThanhToanDu);
+            this.groupBox3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox3.Location = new System.Drawing.Point(23, 246);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Size = new System.Drawing.Size(1256, 238);
+            this.groupBox3.TabIndex = 5;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Hóa đơn đã thanh toán đủ";
+            // 
+            // lvHoaDonThanhToanDu
+            // 
+            this.lvHoaDonThanhToanDu.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader11,
+            this.columnHeader12,
+            this.columnHeader13,
+            this.columnHeader14,
+            this.columnHeader15,
+            this.columnHeader17});
+            this.lvHoaDonThanhToanDu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvHoaDonThanhToanDu.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvHoaDonThanhToanDu.FullRowSelect = true;
+            this.lvHoaDonThanhToanDu.GridLines = true;
+            this.lvHoaDonThanhToanDu.HideSelection = false;
+            this.lvHoaDonThanhToanDu.Location = new System.Drawing.Point(4, 33);
+            this.lvHoaDonThanhToanDu.Margin = new System.Windows.Forms.Padding(4);
+            this.lvHoaDonThanhToanDu.Name = "lvHoaDonThanhToanDu";
+            this.lvHoaDonThanhToanDu.Size = new System.Drawing.Size(1248, 201);
+            this.lvHoaDonThanhToanDu.TabIndex = 2;
+            this.lvHoaDonThanhToanDu.UseCompatibleStateImageBehavior = false;
+            this.lvHoaDonThanhToanDu.View = System.Windows.Forms.View.Details;
+            this.lvHoaDonThanhToanDu.Click += new System.EventHandler(this.lvHoaDonThanhToanDu_Click);
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "MãHD";
+            this.columnHeader11.Width = 67;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Mã Phòng";
+            this.columnHeader12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader12.Width = 103;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Tổng tiền";
+            this.columnHeader13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader13.Width = 207;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Ngày xuất HĐ";
+            this.columnHeader14.Width = 222;
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Kì hạn thanh toán";
+            this.columnHeader15.Width = 228;
+            // 
+            // columnHeader17
+            // 
+            this.columnHeader17.Text = "Số tiền còn lại";
+            this.columnHeader17.Width = 294;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.lvLanThanhToan);
+            this.groupBox2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.ForestGreen;
+            this.groupBox2.Location = new System.Drawing.Point(19, 483);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(1260, 210);
+            this.groupBox2.TabIndex = 5;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Các lần thanh toán hóa đơn";
+            // 
+            // lvLanThanhToan
+            // 
+            this.lvLanThanhToan.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader4,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10});
+            this.lvLanThanhToan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvLanThanhToan.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvLanThanhToan.FullRowSelect = true;
+            this.lvLanThanhToan.GridLines = true;
+            this.lvLanThanhToan.HideSelection = false;
+            this.lvLanThanhToan.Location = new System.Drawing.Point(4, 33);
+            this.lvLanThanhToan.Margin = new System.Windows.Forms.Padding(4);
+            this.lvLanThanhToan.Name = "lvLanThanhToan";
+            this.lvLanThanhToan.Size = new System.Drawing.Size(1252, 173);
+            this.lvLanThanhToan.TabIndex = 2;
+            this.lvLanThanhToan.UseCompatibleStateImageBehavior = false;
+            this.lvLanThanhToan.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Mã LTT";
+            this.columnHeader4.Width = 82;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Ngày thanh toán";
+            this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader7.Width = 348;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Số tiền trả";
+            this.columnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader8.Width = 197;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Mã khách";
+            this.columnHeader9.Width = 97;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Họ tên";
+            this.columnHeader10.Width = 227;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.buttonX1);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Red;
-            this.groupBox1.Location = new System.Drawing.Point(1112, 208);
+            this.groupBox1.Location = new System.Drawing.Point(1393, 564);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(254, 117);
+            this.groupBox1.Size = new System.Drawing.Size(254, 125);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Xác nhận đóng tiền";
@@ -156,32 +306,46 @@
             // grCTHD
             // 
             this.grCTHD.Controls.Add(this.lbTT);
+            this.grCTHD.Controls.Add(this.lbTongTienHoaDon);
+            this.grCTHD.Controls.Add(this.lbTTCon);
             this.grCTHD.Controls.Add(this.line1);
-            this.grCTHD.Controls.Add(this.lbTongTien);
+            this.grCTHD.Controls.Add(this.lbTongTienConLai);
             this.grCTHD.Controls.Add(this.groupBox10);
             this.grCTHD.Controls.Add(this.groupBox9);
             this.grCTHD.Controls.Add(this.groupBox8);
             this.grCTHD.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grCTHD.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.grCTHD.Location = new System.Drawing.Point(665, 14);
+            this.grCTHD.Location = new System.Drawing.Point(1304, 4);
             this.grCTHD.Margin = new System.Windows.Forms.Padding(4);
             this.grCTHD.Name = "grCTHD";
             this.grCTHD.Padding = new System.Windows.Forms.Padding(4);
-            this.grCTHD.Size = new System.Drawing.Size(439, 535);
+            this.grCTHD.Size = new System.Drawing.Size(437, 552);
             this.grCTHD.TabIndex = 5;
             this.grCTHD.TabStop = false;
             this.grCTHD.Text = "Chi tiết hóa đơn số:";
             // 
-            // lbTT
+            // lbTongTienHoaDon
             // 
-            this.lbTT.AutoSize = true;
-            this.lbTT.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTT.ForeColor = System.Drawing.Color.Black;
-            this.lbTT.Location = new System.Drawing.Point(160, 479);
-            this.lbTT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbTT.Name = "lbTT";
-            this.lbTT.Size = new System.Drawing.Size(0, 29);
-            this.lbTT.TabIndex = 4;
+            this.lbTongTienHoaDon.AutoSize = true;
+            this.lbTongTienHoaDon.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTongTienHoaDon.ForeColor = System.Drawing.Color.Red;
+            this.lbTongTienHoaDon.Location = new System.Drawing.Point(15, 466);
+            this.lbTongTienHoaDon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTongTienHoaDon.Name = "lbTongTienHoaDon";
+            this.lbTongTienHoaDon.Size = new System.Drawing.Size(129, 29);
+            this.lbTongTienHoaDon.TabIndex = 5;
+            this.lbTongTienHoaDon.Text = "Tổng tiền: ";
+            // 
+            // lbTTCon
+            // 
+            this.lbTTCon.AutoSize = true;
+            this.lbTTCon.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTTCon.ForeColor = System.Drawing.Color.Black;
+            this.lbTTCon.Location = new System.Drawing.Point(189, 512);
+            this.lbTTCon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTTCon.Name = "lbTTCon";
+            this.lbTTCon.Size = new System.Drawing.Size(0, 29);
+            this.lbTTCon.TabIndex = 4;
             // 
             // line1
             // 
@@ -192,17 +356,17 @@
             this.line1.TabIndex = 3;
             this.line1.Text = "line1";
             // 
-            // lbTongTien
+            // lbTongTienConLai
             // 
-            this.lbTongTien.AutoSize = true;
-            this.lbTongTien.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTongTien.ForeColor = System.Drawing.Color.Red;
-            this.lbTongTien.Location = new System.Drawing.Point(15, 479);
-            this.lbTongTien.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbTongTien.Name = "lbTongTien";
-            this.lbTongTien.Size = new System.Drawing.Size(129, 29);
-            this.lbTongTien.TabIndex = 2;
-            this.lbTongTien.Text = "Tổng tiền: ";
+            this.lbTongTienConLai.AutoSize = true;
+            this.lbTongTienConLai.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTongTienConLai.ForeColor = System.Drawing.Color.Red;
+            this.lbTongTienConLai.Location = new System.Drawing.Point(15, 512);
+            this.lbTongTienConLai.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTongTienConLai.Name = "lbTongTienConLai";
+            this.lbTongTienConLai.Size = new System.Drawing.Size(174, 29);
+            this.lbTongTienConLai.TabIndex = 2;
+            this.lbTongTienConLai.Text = "Tổng tiền còn: ";
             // 
             // groupBox10
             // 
@@ -216,7 +380,7 @@
             this.groupBox10.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox10.Size = new System.Drawing.Size(417, 117);
+            this.groupBox10.Size = new System.Drawing.Size(417, 116);
             this.groupBox10.TabIndex = 1;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Nước";
@@ -338,7 +502,7 @@
             this.groupBox8.Controls.Add(this.label2);
             this.groupBox8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox8.ForeColor = System.Drawing.Color.DarkGreen;
-            this.groupBox8.Location = new System.Drawing.Point(8, 90);
+            this.groupBox8.Location = new System.Drawing.Point(12, 98);
             this.groupBox8.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Padding = new System.Windows.Forms.Padding(4);
@@ -398,14 +562,14 @@
             this.groupBox6.Controls.Add(this.listHoaDon);
             this.groupBox6.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.ForeColor = System.Drawing.Color.ForestGreen;
-            this.groupBox6.Location = new System.Drawing.Point(4, 60);
+            this.groupBox6.Location = new System.Drawing.Point(23, 4);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox6.Size = new System.Drawing.Size(644, 432);
+            this.groupBox6.Size = new System.Drawing.Size(1256, 238);
             this.groupBox6.TabIndex = 4;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Hóa đơn";
+            this.groupBox6.Text = "Hóa đơn có thể thanh toán";
             // 
             // listHoaDon
             // 
@@ -414,7 +578,8 @@
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader1,
-            this.columnHeader2});
+            this.columnHeader2,
+            this.columnHeader16});
             this.listHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listHoaDon.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listHoaDon.FullRowSelect = true;
@@ -423,7 +588,7 @@
             this.listHoaDon.Location = new System.Drawing.Point(4, 33);
             this.listHoaDon.Margin = new System.Windows.Forms.Padding(4);
             this.listHoaDon.Name = "listHoaDon";
-            this.listHoaDon.Size = new System.Drawing.Size(636, 395);
+            this.listHoaDon.Size = new System.Drawing.Size(1248, 201);
             this.listHoaDon.TabIndex = 2;
             this.listHoaDon.UseCompatibleStateImageBehavior = false;
             this.listHoaDon.View = System.Windows.Forms.View.Details;
@@ -432,42 +597,59 @@
             // columnHeader3
             // 
             this.columnHeader3.Text = "MãHD";
-            this.columnHeader3.Width = 100;
+            this.columnHeader3.Width = 68;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Mã Phòng";
             this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader5.Width = 100;
+            this.columnHeader5.Width = 101;
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Tổng tiền";
             this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader6.Width = 160;
+            this.columnHeader6.Width = 209;
             // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Ngày xuất HĐ";
-            this.columnHeader1.Width = 136;
+            this.columnHeader1.Width = 219;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Kì hạn thanh toán";
-            this.columnHeader2.Width = 138;
+            this.columnHeader2.Width = 229;
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Số tiền còn lại";
+            this.columnHeader16.Width = 293;
+            // 
+            // lbTT
+            // 
+            this.lbTT.AutoSize = true;
+            this.lbTT.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lbTT.ForeColor = System.Drawing.Color.Black;
+            this.lbTT.Location = new System.Drawing.Point(151, 466);
+            this.lbTT.Name = "lbTT";
+            this.lbTT.Size = new System.Drawing.Size(0, 29);
+            this.lbTT.TabIndex = 6;
             // 
             // DSThuTien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.grDSTT);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DSThuTien";
-            this.Size = new System.Drawing.Size(1341, 692);
+            this.Size = new System.Drawing.Size(1780, 773);
             this.Load += new System.EventHandler(this.DSThuTien_Load);
-            this.grDSTT.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.grCTHD.ResumeLayout(false);
             this.grCTHD.PerformLayout();
@@ -492,7 +674,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.GroupBox grCTHD;
-        private System.Windows.Forms.Label lbTongTien;
+        private System.Windows.Forms.Label lbTongTienConLai;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.Label lbTienNuoc;
         private System.Windows.Forms.Label lbNuocSK;
@@ -511,8 +693,26 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private DevComponents.DotNetBar.ButtonX buttonX1;
         private DevComponents.DotNetBar.Controls.Line line1;
-        private System.Windows.Forms.Label lbTT;
+        private System.Windows.Forms.Label lbTTCon;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ListView lvLanThanhToan;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ListView lvHoaDonThanhToanDu;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.ColumnHeader columnHeader17;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.Label lbTongTienHoaDon;
+        private System.Windows.Forms.Label lbTT;
     }
 }

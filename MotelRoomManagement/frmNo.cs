@@ -83,12 +83,12 @@ namespace MotelRoomManagement
                 row.Add(dataHoaDonThanhToanDuoc.Rows[i][5].ToString());
                 row.Add(dataHoaDonThanhToanDuoc.Rows[i][6].ToString());
                 row.Add(dataHoaDonThanhToanDuoc.Rows[i][7].ToString());
-                row.Add(dataHoaDonThanhToanDuoc.Rows[i][1].ToString());
                 int trangThaiHoaDon = Convert.ToInt32(dataHoaDonThanhToanDuoc.Rows[i][9].ToString());
                 if (trangThaiHoaDon == 1)
                     row.Add("Chưa hề thanh toán");
                 else
                     row.Add("Chưa thanh toán đủ");
+                row.Add(dataHoaDonThanhToanDuoc.Rows[i][1].ToString());
                 dgHoaDonThanhToanDuoc.Rows.Add(row.ToArray());
 
                 
@@ -123,7 +123,7 @@ namespace MotelRoomManagement
                 int index = dgHoaDonThanhToanDuoc.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgHoaDonThanhToanDuoc.Rows[index];
                 idHoaDonThanhToan = Convert.ToInt32(selectedRow.Cells[0].Value.ToString().Trim().Substring(2));
-                idPhong = Convert.ToInt32(selectedRow.Cells[7].Value.ToString());
+                idPhong = Convert.ToInt32(selectedRow.Cells[8].Value.ToString());
 
                 var data = new KhachTroBUS().GetKhachTheoMaPhong("Select Top(1) * From tb_KhachTro kt Where kt.id_KhachTro_Phong = '" + idPhong + "'");
                 idKhachThanhToan = Convert.ToInt32(data.Rows[0][0].ToString());
