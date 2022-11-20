@@ -33,6 +33,8 @@
             this.panelTT = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.numDay = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -146,6 +148,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.numDay);
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.label7);
             this.groupBox4.Controls.Add(this.label6);
@@ -161,6 +165,31 @@
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thống kê";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(8, 151);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(166, 24);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Số phòng đã đầy:";
+            // 
+            // numDay
+            // 
+            this.numDay.AutoSize = true;
+            this.numDay.BackColor = System.Drawing.Color.White;
+            this.numDay.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numDay.ForeColor = System.Drawing.Color.Black;
+            this.numDay.Location = new System.Drawing.Point(190, 151);
+            this.numDay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.numDay.Name = "numDay";
+            this.numDay.Size = new System.Drawing.Size(64, 24);
+            this.numDay.TabIndex = 5;
+            this.numDay.Text = "label1";
             // 
             // label8
             // 
@@ -398,7 +427,6 @@
             this.listKhach.TabIndex = 0;
             this.listKhach.UseCompatibleStateImageBehavior = false;
             this.listKhach.View = System.Windows.Forms.View.Details;
-            
             // 
             // columnHeader1
             // 
@@ -682,5 +710,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label numDay;
     }
 }

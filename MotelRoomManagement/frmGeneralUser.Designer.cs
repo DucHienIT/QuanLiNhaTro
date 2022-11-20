@@ -119,6 +119,7 @@
             // 
             this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel1.TabIndex = 1;
+            this.ribbonPanel1.Visible = true;
             // 
             // ribbonBar12
             // 
@@ -437,10 +438,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(-7, 285);
+            this.label1.Location = new System.Drawing.Point(349, 197);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(562, 57);
+            this.label1.Size = new System.Drawing.Size(574, 59);
             this.label1.TabIndex = 8;
             this.label1.Text = "Danh sách khách trọ";
             // 
@@ -461,11 +462,11 @@
             this.listKhach.FullRowSelect = true;
             this.listKhach.GridLines = true;
             this.listKhach.HideSelection = false;
-            this.listKhach.Location = new System.Drawing.Point(3, 370);
+            this.listKhach.Location = new System.Drawing.Point(3, 260);
             this.listKhach.Margin = new System.Windows.Forms.Padding(4);
             this.listKhach.MultiSelect = false;
             this.listKhach.Name = "listKhach";
-            this.listKhach.Size = new System.Drawing.Size(1011, 191);
+            this.listKhach.Size = new System.Drawing.Size(1319, 344);
             this.listKhach.TabIndex = 9;
             this.listKhach.UseCompatibleStateImageBehavior = false;
             this.listKhach.View = System.Windows.Forms.View.Details;

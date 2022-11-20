@@ -39,8 +39,6 @@ namespace MotelRoomManagement
                 Room _CbData = new Room();
                 var phongtrong = _CbData.GetDataTWChild("Vacant");
                 var phongdathue = _CbData.GetDataTWChild("NoVacant");
-                numTrong.Text = phongtrong.Rows.Count.ToString();
-                numRent.Text = phongdathue.Rows.Count.ToString();
             }
             catch
             {
@@ -55,13 +53,15 @@ namespace MotelRoomManagement
             {
                 Room _TW = new Room();
                 treeView1.ImageList = TwImgList;
+                DataTable tb_NoVacantRooms = _TW.GetDataTWChild("NoVacant");
+                int noVacantRoomsCount = tb_NoVacantRooms.Rows.Count;
+                numRent.Text = noVacantRoomsCount.ToString();
 
-
-                for (int j = 0; j < _TW.GetDataTWChild("NoVacant").Rows.Count; j++)
+                for (int j = 0; j < noVacantRoomsCount; j++)
                 {
-                    TreeNode nodecon = treeView1.Nodes.Add(_TW.GetDataTWChild("NoVacant").Rows[j][1].ToString());
+                    TreeNode nodecon = treeView1.Nodes.Add(tb_NoVacantRooms.Rows[j][1].ToString());
                     treeView1.Nodes[j].Tag = "1";
-                    treeView1.Nodes[j].Name = _TW.GetDataTWChild("NoVacant").Rows[j][0].ToString();
+                    treeView1.Nodes[j].Name = tb_NoVacantRooms.Rows[j][0].ToString();
                     nodecon.ImageIndex = 1;
                     nodecon.SelectedImageIndex = 1;
                 }
@@ -81,13 +81,16 @@ namespace MotelRoomManagement
             {
                 Room _TW = new Room();
                 treeView3.ImageList = TwImgList;
+                DataTable tb_FullRooms = _TW.GetDataTWChild("Full");
+                int fullRoomsCount = tb_FullRooms.Rows.Count;
+                numDay.Text = fullRoomsCount.ToString();
 
 
-                for (int j = 0; j < _TW.GetDataTWChild("Full").Rows.Count; j++)
+                for (int j = 0; j < fullRoomsCount; j++)
                 {
-                    TreeNode nodecon = treeView3.Nodes.Add(_TW.GetDataTWChild("Full").Rows[j][1].ToString());
+                    TreeNode nodecon = treeView3.Nodes.Add(tb_FullRooms.Rows[j][1].ToString());
                     treeView3.Nodes[j].Tag = "1";
-                    treeView3.Nodes[j].Name = _TW.GetDataTWChild("Full").Rows[j][0].ToString();
+                    treeView3.Nodes[j].Name = tb_FullRooms.Rows[j][0].ToString();
                     nodecon.ImageIndex = 1;
                     nodecon.SelectedImageIndex = 1;
                 }
@@ -106,13 +109,15 @@ namespace MotelRoomManagement
             {
                 Room _TW = new Room();
                 treeView2.ImageList = TwImgList;
+                DataTable tb_VacantRooms = _TW.GetDataTWChild("Vacant");
+                int vacantRoomsCount = tb_VacantRooms.Rows.Count;
+                numTrong.Text = vacantRoomsCount.ToString();
 
-
-                for (int j = 0; j < _TW.GetDataTWChild("Vacant").Rows.Count; j++)
+                for (int j = 0; j < vacantRoomsCount; j++)
                 {
-                    TreeNode nodecon = treeView2.Nodes.Add(_TW.GetDataTWChild("Vacant").Rows[j][1].ToString());
+                    TreeNode nodecon = treeView2.Nodes.Add(tb_VacantRooms.Rows[j][1].ToString());
                     treeView2.Nodes[j].Tag = "1";
-                    treeView2.Nodes[j].Name = _TW.GetDataTWChild("Vacant").Rows[j][0].ToString();
+                    treeView2.Nodes[j].Name = tb_VacantRooms.Rows[j][0].ToString();
                     nodecon.ImageIndex = 1;
                     nodecon.SelectedImageIndex = 1;
                 }
@@ -233,6 +238,11 @@ namespace MotelRoomManagement
                     listKhach.Items.Add(item);
                 }
             }
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
