@@ -26,7 +26,7 @@ namespace MotelRoomManagement
         private void DSThuTien_Load(object sender, EventArgs e)
         {
             LoadList();
-            LoadHoaDonThanhToanDu();
+            LoadHoaDonThanhToanDuHoacQuaHan();
         }
       
         private void LoadList()
@@ -48,9 +48,9 @@ namespace MotelRoomManagement
            
         }
 
-        private void LoadHoaDonThanhToanDu()
+        private void LoadHoaDonThanhToanDuHoacQuaHan()
         {
-            string sql = "select * from vw_ThongTinHoaDon where IdHoaDon in (select IdHoaDon from tb_HoaDon where TrangThaiHoaDon = 3)";
+            string sql = "select * from vw_ThongTinHoaDon where IdHoaDon in (select IdHoaDon from tb_HoaDon where TrangThaiHoaDon = 3 Or (TrangThaiHoaDon In(1,2) And GETDATE() < NgayXuatHoaDon Or GETDATE() > KiHanThanhToan))";
             Room ListLoai = new Room();
             var loaiphong = ListLoai.GetDataPhong(sql);
             for (int i = 0; i < loaiphong.Rows.Count; i++)
@@ -74,12 +74,22 @@ namespace MotelRoomManagement
             for (int i = 0; i < tb_LanThanhToan.Rows.Count; i++)
             {
                 //mặc định subitem đầu tiền là cột truyền vào constructor
-                ListViewItem item = new ListViewItem("ltt" + tb_LanThanhToan.Rows[i][0].ToString());
-                item.SubItems.Add(tb_LanThanhToan.Rows[i][1].ToString());
-                item.SubItems.Add(string.Format("{0:#,##0}", Int32.Parse(tb_LanThanhToan.Rows[i][2].ToString().TrimEnd())));
-                item.SubItems.Add(tb_LanThanhToan.Rows[i][3].ToString().TrimEnd());
-                item.SubItems.Add(tb_LanThanhToan.Rows[i][4].ToString().TrimEnd());
-                lvLanThanhToan.Items.Add(item);
+                if(tb_LanThanhToan.Rows[i][3].ToString() != "" && tb_LanThanhToan.Rows[i][4].ToString() != "")
+                {
+                    ListViewItem item = new ListViewItem("ltt" + tb_LanThanhToan.Rows[i][0].ToString());
+                    item.SubItems.Add(tb_LanThanhToan.Rows[i][1].ToString());
+                    item.SubItems.Add(string.Format("{0:#,##0}", Int32.Parse(tb_LanThanhToan.Rows[i][2].ToString().TrimEnd())));
+                    item.SubItems.Add(tb_LanThanhToan.Rows[i][3].ToString().TrimEnd());
+                    item.SubItems.Add(tb_LanThanhToan.Rows[i][4].ToString().TrimEnd());
+                    lvLanThanhToan.Items.Add(item);
+                }
+                else {
+                    MessageBox.Show("Hóa đơn được thanh toán bởi khách đã rời đi nên lần thanh toán không có thông tin khách","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    ListViewItem item = new ListViewItem("ltt" + tb_LanThanhToan.Rows[i][0].ToString());
+                    item.SubItems.Add(tb_LanThanhToan.Rows[i][1].ToString());
+                    item.SubItems.Add(string.Format("{0:#,##0}", Int32.Parse(tb_LanThanhToan.Rows[i][2].ToString().TrimEnd())));
+                    lvLanThanhToan.Items.Add(item);
+                }
             }
         }
 
@@ -144,7 +154,7 @@ namespace MotelRoomManagement
                     listHoaDon.Items.Clear();
                     lvHoaDonThanhToanDu.Items.Clear();
                     LoadList();
-                    LoadHoaDonThanhToanDu();
+                    LoadHoaDonThanhToanDuHoacQuaHan();
                     resetTextLabels();
                 }
                 catch (Exception ex)

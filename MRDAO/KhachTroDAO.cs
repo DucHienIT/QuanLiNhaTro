@@ -111,9 +111,9 @@ namespace MRDAO
             paras.Add(new SqlParameter("@SoDienThoai", kt.SoDienThoai));
             paras.Add(new SqlParameter("@NamSinh", kt.NamSinh));
             paras.Add(new SqlParameter("@QueQuan", kt.QueQuan));
-            paras.Add(new SqlParameter("@NgheNghiep", kt.NgheNghiep));
-            paras.Add(new SqlParameter("@id_KhachTro_Phong", kt.id_KhachTro_Phong));
-            paras.Add(new SqlParameter("@TenDangNhap", kt.TenDangNhap));
+            paras.Add(new SqlParameter("@NgheNghiep", kt.NgheNghiep));            
+            paras.Add(new SqlParameter("@id_KhachTro_Phong", kt.id_KhachTro_Phong));            
+            paras.Add(new SqlParameter("@TenDangNhap", kt.TenDangNhap));                     
             try
             {
                 return (dp.IExecuteNonQuery(sql, System.Data.CommandType.Text, paras));

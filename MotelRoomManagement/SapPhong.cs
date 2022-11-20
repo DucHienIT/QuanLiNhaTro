@@ -53,6 +53,7 @@ namespace MotelRoomManagement
 
         private void LoadData_ListPhong()
         {
+            lvPhong.Items.Clear();
             string loaiphong = cbLoaiPhong.SelectedValue.ToString();
             Room data = new Room();
             var phong = data.GetDataPhong("SELECT MaPhong, TenPhong FROM tb_Phong, tb_DonGiaPhong, tb_LoaiPhong WHERE tb_Phong.id_Phong_TrangThaiPhong = 1 AND tb_Phong.id_Phong_DonGia = tb_DonGiaPhong.IdDonGiaPhong AND tb_LoaiPhong.IdLoaiPhong = tb_DonGiaPhong.id_DonGia_LoaiPhong AND tb_LoaiPhong.MaLoaiPhong = N'" + loaiphong + "'");
@@ -147,6 +148,7 @@ namespace MotelRoomManagement
             txtQueQuan.Text = "";
             txtSdt.Text = "";
             txtTenDangNhap.Text = "";
+            txtPass.Text = "";
         }
 
         private void lvPhong_SelectedIndexChanged(object sender, EventArgs e)

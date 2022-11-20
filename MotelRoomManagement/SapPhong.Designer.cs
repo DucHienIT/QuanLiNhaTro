@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SapPhong));
             this.label7 = new System.Windows.Forms.Label();
             this.grTTKDK = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtNamSinh = new System.Windows.Forms.TextBox();
             this.txtCCCD = new System.Windows.Forms.TextBox();
             this.txtTenDangNhap = new System.Windows.Forms.TextBox();
@@ -68,8 +70,6 @@
             this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
             this.lbPKC = new System.Windows.Forms.Label();
             this.lbPCK1 = new System.Windows.Forms.Label();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.grTTKDK.SuspendLayout();
             this.panelEx1.SuspendLayout();
             this.groupPanel5.SuspendLayout();
@@ -145,6 +145,26 @@
             this.grTTKDK.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.grTTKDK.TabIndex = 0;
             this.grTTKDK.Text = "Thông tin khách đăng kí";
+            // 
+            // txtPass
+            // 
+            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Location = new System.Drawing.Point(167, 262);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(336, 24);
+            this.txtPass.TabIndex = 67;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(4, 262);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 23);
+            this.label1.TabIndex = 66;
+            this.label1.Text = "Mật khẩu";
             // 
             // txtNamSinh
             // 
@@ -300,6 +320,7 @@
             // 
             this.cbLoaiPhong.DisplayMember = "Text";
             this.cbLoaiPhong.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbLoaiPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbLoaiPhong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLoaiPhong.FormattingEnabled = true;
             this.cbLoaiPhong.ItemHeight = 17;
@@ -349,6 +370,7 @@
             this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX2.TabIndex = 4;
             this.buttonX2.Text = "Clear";
+            this.buttonX2.Click += new System.EventHandler(this.buttonX2_Click);
             // 
             // btnSave
             // 
@@ -643,26 +665,6 @@
             this.lbPCK1.Name = "lbPCK1";
             this.lbPCK1.Size = new System.Drawing.Size(0, 21);
             this.lbPCK1.TabIndex = 58;
-            // 
-            // txtPass
-            // 
-            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(167, 262);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(336, 24);
-            this.txtPass.TabIndex = 67;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 262);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 23);
-            this.label1.TabIndex = 66;
-            this.label1.Text = "Mật khẩu";
             // 
             // SapPhong
             // 

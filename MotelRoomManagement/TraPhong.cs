@@ -72,13 +72,14 @@ namespace MotelRoomManagement
 
         private void btnTraPhong_Click(object sender, EventArgs e)
         {
-            string lenh = "SELECT * FROM tb_HoaDon WHERE id_HoaDon_Phong = " + idPhong;
+            //Đổi không load từ tb_HoaDon vì hóa đơn có thể quá hạn chưa trả/chưa trả đủ nhưng nếu các hóa đơn sau thanh toán dư thì vẫn có thể xóa nợ
+            string lenh = "SELECT * FROM tb_ThongTinNo WHERE id_ThongTinNo_Phong = " + idPhong;
             HoadonBUS data = new HoadonBUS();
             DataTable bang = data.GetInfo(lenh);
 
             if (bang.Rows.Count > 0)
             {
-                MessageBox.Show("Chưa thể trả phòng do còn hóa đơn chưa thanh toán");
+                MessageBox.Show("Chưa thể trả phòng do còn nợ.Hãy thanh toán một hóa đơn và xóa nợ");
             }
             else
             {

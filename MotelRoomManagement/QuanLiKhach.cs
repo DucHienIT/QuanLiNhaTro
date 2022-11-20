@@ -16,7 +16,7 @@ namespace MotelRoomManagement
     public partial class QuanLiKhach : UserControl
     {
         Room data = new Room();
-        string maKhackTro;
+        int idKhachTro;
         int idPhong;
      
         public QuanLiKhach()
@@ -90,7 +90,7 @@ namespace MotelRoomManagement
                 string sql = "SELECT * FROM tb_KhachTro WHERE MaKhachTro = N'" + makhach + "'";
               
                 List<tb_KhachTro> tmp = new KhachTroBUS().GetKhach_List(sql);
-                maKhackTro = makhach.Trim();
+                idKhachTro = Convert.ToInt32(makhach.Trim().Substring(2));
                 txtCCCD.DataBindings.Add("Text", tmp, "CCCD");
                 txtHoTen.DataBindings.Add("Text", tmp, "HoTen");
                 txtNamSinh.DataBindings.Add("Text", tmp, "NamSinh");
@@ -183,7 +183,8 @@ namespace MotelRoomManagement
             btnSua.Visible = true;
 
             tb_KhachTro kt = new tb_KhachTro(cccd, hoten, sdt, namsinh, quequan, nghenghiep, idPhong, tendangnhap);
-            string sql = "Exec proc_CapNhatThongTinKhachTro " + maKhackTro + ", @CCCD, @HoTen, @SoDienThoai, @NamSinh, @QueQuan, @NgheNghiep, @TenDangNhap";
+            //bỏ tên đăng nhập vì ko có tham số này trong proc_CapNhatThongTinKhachTro
+            string sql = "Exec proc_CapNhatThongTinKhachTro " + idKhachTro + ", @CCCD, @HoTen, @SoDienThoai, @NamSinh, @QueQuan, @NgheNghiep";
             KhachTroBUS khachtro = new KhachTroBUS();
             khachtro.Insert(sql, kt);
             MessageBox.Show("Đã sửa thông tin khách!");

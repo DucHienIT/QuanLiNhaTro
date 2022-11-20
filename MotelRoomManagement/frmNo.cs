@@ -126,13 +126,19 @@ namespace MotelRoomManagement
                 idPhong = Convert.ToInt32(selectedRow.Cells[8].Value.ToString());
 
                 var data = new KhachTroBUS().GetKhachTheoMaPhong("Select Top(1) * From tb_KhachTro kt Where kt.id_KhachTro_Phong = '" + idPhong + "'");
-                idKhachThanhToan = Convert.ToInt32(data.Rows[0][0].ToString());
-                MessageBox.Show(idHoaDonThanhToan.ToString()  + " " +idKhachThanhToan.ToString());
-                ngayThanhToan = DateTime.Now;
-                idPhong = int.Parse(data.Rows[0][3].ToString());
+                if(data.Rows[0][0].ToString() != "") //hóa đơn được tt 1 phần hoặc chưa thanh toán nhưng do đã trả phòng,.. mà không còn khách trọ phòng này và các lần thanh toán
+                {
+                    idKhachThanhToan = Convert.ToInt32(data.Rows[0][0].ToString());
+                    MessageBox.Show(idHoaDonThanhToan.ToString()  + " " +idKhachThanhToan.ToString());
+                    ngayThanhToan = DateTime.Now;
+                    idPhong = int.Parse(data.Rows[0][3].ToString());
 
-                btn_Sua.Enabled = true;
-                btn_Xoa.Enabled = true;
+                    btn_Sua.Enabled = true;
+                    btn_Xoa.Enabled = true;
+                }   
+                else {
+                    MessageBox.Show("Các khách phòng này đã trả phòng hoặc bị đuổi nên không còn ai để thanh toán hóa đơn này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }    
 
             }
         }

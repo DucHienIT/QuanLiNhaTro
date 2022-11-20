@@ -64,7 +64,7 @@
             this.groupPanel1.Location = new System.Drawing.Point(0, 0);
             this.groupPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(1129, 630);
+            this.groupPanel1.Size = new System.Drawing.Size(1643, 630);
             // 
             // 
             // 
@@ -292,7 +292,7 @@
             this.bar1.Location = new System.Drawing.Point(0, 0);
             this.bar1.Margin = new System.Windows.Forms.Padding(4);
             this.bar1.Name = "bar1";
-            this.bar1.Size = new System.Drawing.Size(1129, 25);
+            this.bar1.Size = new System.Drawing.Size(1643, 25);
             this.bar1.Stretch = true;
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bar1.TabIndex = 1;
@@ -307,7 +307,7 @@
             this.Controls.Add(this.groupPanel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TraPhong";
-            this.Size = new System.Drawing.Size(1129, 630);
+            this.Size = new System.Drawing.Size(1643, 630);
             this.Load += new System.EventHandler(this.TraPhong_Load);
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel5.ResumeLayout(false);
