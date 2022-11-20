@@ -48,7 +48,7 @@ namespace MotelRoomManagement
                 ArrayList row = new ArrayList();
                 row.Add(dsphong.Rows[i][0].ToString());
                 row.Add(dsphong.Rows[i][1].ToString());
-                row.Add(dsphong.Rows[i][2].ToString());
+                row.Add(string.Format("{0:#,##0}", Int32.Parse(dsphong.Rows[i][2].ToString().TrimEnd())));
                 dgvQLLP.Rows.Add(row.ToArray());
             }
 
@@ -81,8 +81,8 @@ namespace MotelRoomManagement
                 row.Add(dataHoaDonThanhToanDuoc.Rows[i][3].ToString());
                 row.Add(dataHoaDonThanhToanDuoc.Rows[i][4].ToString());
                 row.Add(dataHoaDonThanhToanDuoc.Rows[i][5].ToString());
-                row.Add(dataHoaDonThanhToanDuoc.Rows[i][6].ToString());
-                row.Add(dataHoaDonThanhToanDuoc.Rows[i][7].ToString());
+                row.Add(string.Format("{0:#,##0}", Int32.Parse(dataHoaDonThanhToanDuoc.Rows[i][6].ToString().TrimEnd())));
+                row.Add(string.Format("{0:#,##0}", Int32.Parse(dataHoaDonThanhToanDuoc.Rows[i][7].ToString().TrimEnd())));
                 int trangThaiHoaDon = Convert.ToInt32(dataHoaDonThanhToanDuoc.Rows[i][9].ToString());
                 if (trangThaiHoaDon == 1)
                     row.Add("Chưa hề thanh toán");
@@ -109,6 +109,7 @@ namespace MotelRoomManagement
                 txtMaNo.Text = data.Rows[0][1].ToString();
                 txtSoNo.Text = data.Rows[0][2].ToString();
                 soNoHienTai = Convert.ToDecimal(txtSoNo.Text);
+                txtSoNo.Text = string.Format("{0:#,##0}", Int32.Parse(data.Rows[0][2].ToString().TrimEnd()));
                 idPhong = int.Parse(data.Rows[0][3].ToString());
 
                 Load_dataHoaDonThanhToanDuoc(idPhong);

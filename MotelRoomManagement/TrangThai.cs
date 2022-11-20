@@ -182,7 +182,8 @@ namespace MotelRoomManagement
                     label1.Text = dkphong;
                     lbLoaiPhong.Text = ttp.Rows[0][1].ToString();
                     lbDienTich.Text = ttp.Rows[0][2].ToString();
-                    lbgia.Text = ttp.Rows[0][3].ToString();
+                    lbgia.Text = string.Format("{0:#,##0}", Int32.Parse(ttp.Rows[0][3].ToString().TrimEnd()));
+                    
                     panel2.Visible = true;
                 }
             }

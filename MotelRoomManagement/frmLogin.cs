@@ -16,7 +16,7 @@ namespace MotelRoomManagement
 {
     public partial class frmLogin : Form
     {
-        SqlConnection cn = new SqlConnection("Data Source = DUCTHINHPC;Initial Catalog = db_QuanLyPhongTro; Integrated Security = True");
+        SqlConnection cn = new SqlConnection("Data Source=HIENPC\\HIEN;Initial Catalog=db_QuanLyPhongTro;Integrated Security=True");
 
 
         public frmLogin()

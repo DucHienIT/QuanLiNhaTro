@@ -34,6 +34,7 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listHoaDon = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.lbTienPhong = new System.Windows.Forms.Label();
             this.lbLoaiphong = new System.Windows.Forms.Label();
@@ -75,7 +76,6 @@
             // 
             // columnHeader2
             // 
-            this.columnHeader2.DisplayIndex = 4;
             this.columnHeader2.Text = "Kì hạn thanh toán";
             this.columnHeader2.Width = 208;
             // 
@@ -102,6 +102,7 @@
             this.columnHeader3,
             this.columnHeader5,
             this.columnHeader6,
+            this.columnHeader4,
             this.columnHeader2,
             this.columnHeader1});
             this.listHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -123,6 +124,11 @@
             this.columnHeader1.DisplayIndex = 3;
             this.columnHeader1.Text = "Trạng thái";
             this.columnHeader1.Width = 148;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.DisplayIndex = 5;
+            this.columnHeader4.Text = "Số tiền còn lại";
             // 
             // groupBox6
             // 
@@ -573,5 +579,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label lbTT2;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }

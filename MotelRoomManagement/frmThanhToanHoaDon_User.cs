@@ -42,6 +42,7 @@ namespace MotelRoomManagement
                 ListViewItem item = new ListViewItem(loaiphong.Rows[i][8].ToString().TrimEnd());
                 item.SubItems.Add(loaiphong.Rows[i][2].ToString().TrimEnd());
                 item.SubItems.Add(string.Format("{0:#,##0}", Int32.Parse(loaiphong.Rows[i][7].ToString().TrimEnd())));
+                item.SubItems.Add(string.Format("{0:#,##0}", Int32.Parse(loaiphong.Rows[i][6].ToString().TrimEnd())));
                 item.SubItems.Add(loaiphong.Rows[i][3].ToString().TrimEnd());
 
 

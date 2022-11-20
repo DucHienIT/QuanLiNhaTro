@@ -50,6 +50,7 @@
             this.dgvQLLP.RowTemplate.Height = 24;
             this.dgvQLLP.Size = new System.Drawing.Size(631, 359);
             this.dgvQLLP.TabIndex = 0;
+            this.dgvQLLP.SelectionChanged += new System.EventHandler(this.dgvQLLP_SelectionChanged);
             // 
             // label1
             // 

@@ -45,5 +45,19 @@ namespace MRBUS
         }
 
 
+        public void ThucThi(string sql)
+        {
+            try
+            {
+                SqlDataReader result = new DataProvider().ExecuteReader(sql);
+                
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
+
     }
 }

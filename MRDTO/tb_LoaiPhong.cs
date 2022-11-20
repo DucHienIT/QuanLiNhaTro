@@ -10,11 +10,9 @@ namespace MRDTO
         public int IdLoaiPhong { get; set; }
         public string LoaiPhong { get; set; }
         public string MaLoaiPhong { get; set; }
-        public tb_LoaiPhong(int IdLoaiPhong, string LoaiPhong, string MaLoaiPhong)
-        {
-            this.IdLoaiPhong = IdLoaiPhong;
+        public tb_LoaiPhong(string LoaiPhong)
+        {    
             this.LoaiPhong = LoaiPhong;
-            this.MaLoaiPhong = MaLoaiPhong;
         }
     }
 }

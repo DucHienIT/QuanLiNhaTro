@@ -16,3 +16,9 @@ C:\Users\PC\OneDrive\Máy tính\repo Motel management\QuanLiNhaTro\MRDTO\obj\Deb
 C:\Users\PC\OneDrive\Máy tính\repo Motel management\QuanLiNhaTro\MRDTO\obj\Debug\MRDTO.csproj.CoreCompileInputs.cache
 C:\Users\PC\OneDrive\Máy tính\repo Motel management\QuanLiNhaTro\MRDTO\obj\Debug\MRDTO.dll
 C:\Users\PC\OneDrive\Máy tính\repo Motel management\QuanLiNhaTro\MRDTO\obj\Debug\MRDTO.pdb
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\Project2011\QuanLiNhaTro\MRDTO\bin\Debug\MRDTO.dll
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\Project2011\QuanLiNhaTro\MRDTO\bin\Debug\MRDTO.pdb
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\Project2011\QuanLiNhaTro\MRDTO\obj\Debug\MRDTO.csproj.AssemblyReference.cache
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\Project2011\QuanLiNhaTro\MRDTO\obj\Debug\MRDTO.csproj.CoreCompileInputs.cache
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\Project2011\QuanLiNhaTro\MRDTO\obj\Debug\MRDTO.dll
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\Project2011\QuanLiNhaTro\MRDTO\obj\Debug\MRDTO.pdb

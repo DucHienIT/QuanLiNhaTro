@@ -25,3 +25,12 @@ C:\Users\PC\OneDrive\Máy tính\repo Motel management\QuanLiNhaTro\MRDAO\obj\Deb
 C:\Users\PC\OneDrive\Máy tính\repo Motel management\QuanLiNhaTro\MRDAO\obj\Debug\MRDAO.csproj.CopyComplete
 C:\Users\PC\OneDrive\Máy tính\repo Motel management\QuanLiNhaTro\MRDAO\obj\Debug\MRDAO.dll
 C:\Users\PC\OneDrive\Máy tính\repo Motel management\QuanLiNhaTro\MRDAO\obj\Debug\MRDAO.pdb
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\Project2011\QuanLiNhaTro\MRDAO\bin\Debug\MRDAO.dll
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\Project2011\QuanLiNhaTro\MRDAO\bin\Debug\MRDAO.pdb
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\Project2011\QuanLiNhaTro\MRDAO\bin\Debug\MRDTO.dll
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\Project2011\QuanLiNhaTro\MRDAO\bin\Debug\MRDTO.pdb
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\Project2011\QuanLiNhaTro\MRDAO\obj\Debug\MRDAO.csproj.AssemblyReference.cache
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\Project2011\QuanLiNhaTro\MRDAO\obj\Debug\MRDAO.csproj.CoreCompileInputs.cache
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\Project2011\QuanLiNhaTro\MRDAO\obj\Debug\MRDAO.csproj.CopyComplete
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\Project2011\QuanLiNhaTro\MRDAO\obj\Debug\MRDAO.dll
+D:\HOC_CHINH_KHOA\HKI 2022\HE QUAN TRI CSDL\Project2011\QuanLiNhaTro\MRDAO\obj\Debug\MRDAO.pdb

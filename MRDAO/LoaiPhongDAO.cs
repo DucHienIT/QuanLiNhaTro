@@ -34,7 +34,7 @@ namespace MRDAO
                     MaLoaiPhong = dr.GetString(2);
                    
 
-                    tb_LoaiPhong pro = new tb_LoaiPhong(IdLoaiPhong, LoaiPhong, MaLoaiPhong);
+                    tb_LoaiPhong pro = new tb_LoaiPhong(LoaiPhong);
                     list.Add(pro);
                 }
                 return list;

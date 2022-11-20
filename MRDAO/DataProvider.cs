@@ -15,7 +15,7 @@ namespace MRDAO
 
         public DataProvider()
         {
-            cnStr = "Data Source=DUCTHINHPC;Initial Catalog=db_QuanLyPhongTro;Integrated Security=True";
+            cnStr = "Data Source=HIENPC\\HIEN;Initial Catalog=db_QuanLyPhongTro;Integrated Security=True";
             cn = new SqlConnection(cnStr);
         }
         public void Connect()

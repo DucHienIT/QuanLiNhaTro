@@ -216,11 +216,7 @@ namespace MotelRoomManagement
             frm.Show();
         }
 
-        private void buttonItem24_Click(object sender, EventArgs e)
-        {
-            frmCustomerReport frm = new frmCustomerReport();
-            frm.Show();
-        }
+    
 
         private void buttonItem35_Click(object sender, EventArgs e)
         {
