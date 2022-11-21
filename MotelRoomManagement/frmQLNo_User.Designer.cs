@@ -43,13 +43,21 @@
             // 
             // dgvQLLP
             // 
+            this.dgvQLLP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvQLLP.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dgvQLLP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvQLLP.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dgvQLLP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvQLLP.GridColor = System.Drawing.SystemColors.AppWorkspace;
+            this.dgvQLLP.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dgvQLLP.Location = new System.Drawing.Point(13, 133);
             this.dgvQLLP.Name = "dgvQLLP";
+            this.dgvQLLP.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dgvQLLP.RowHeadersWidth = 51;
             this.dgvQLLP.RowTemplate.Height = 24;
             this.dgvQLLP.Size = new System.Drawing.Size(631, 359);
             this.dgvQLLP.TabIndex = 0;
+            this.dgvQLLP.SelectionChanged += new System.EventHandler(this.dgvQLLP_SelectionChanged);
             // 
             // label1
             // 
@@ -65,6 +73,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.Highlight;
             this.groupBox2.Controls.Add(this.txtSoNo);
             this.groupBox2.Controls.Add(this.txtMaNo);
             this.groupBox2.Controls.Add(this.txtMaPhong);
@@ -138,6 +147,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1069, 622);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);

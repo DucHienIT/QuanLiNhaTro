@@ -47,6 +47,16 @@ namespace MotelRoomManagement
         private void frmQLNo_User_Load(object sender, EventArgs e)
         {
             Load_datagrid();
+            dgvQLLP.MultiSelect = false;
+        }
+
+        private void dgvQLLP_SelectionChanged(object sender, EventArgs e)
+        {
+
+            DataGridViewRow currRow = dgvQLLP.CurrentRow;
+            txtMaPhong.Text = currRow.Cells[0].Value.ToString();
+            txtMaNo.Text = currRow.Cells[1].Value.ToString();
+            txtSoNo.Text = currRow.Cells[2].Value.ToString();
         }
     }
 }
