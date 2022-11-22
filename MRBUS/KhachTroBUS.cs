@@ -68,6 +68,19 @@ namespace MRBUS
             }
         }
 
+        public int ThucThiSql(string sql)
+        {
+            try
+            {
+                return new KhachTroDAO().ThucThiSql(sql);
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
+
         
     }
 }

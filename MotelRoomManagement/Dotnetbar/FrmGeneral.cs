@@ -206,14 +206,14 @@ namespace MotelRoomManagement
 
         private void buttonX1_Click(object sender, EventArgs e)
         {
-            AccountInformation frm = new AccountInformation(USER, PASS);
-            frm.Show();
+            //AccountInformation frm = new AccountInformation(USER, PASS);
+            //frm.Show();
         }
 
         private void buttonItem17_Click(object sender, EventArgs e)
         {
-            AccountInformation frm = new AccountInformation(USER, PASS);
-            frm.Show();
+            //AccountInformation frm = new AccountInformation(USER, PASS);
+            //frm.Show();
         }
 
         private void buttonItem24_Click(object sender, EventArgs e)
@@ -316,8 +316,8 @@ namespace MotelRoomManagement
 
         private void btnThemTK_Click(object sender, EventArgs e)
         {
-            ThemTK frm = new ThemTK();
-            frm.Show();
+            //ThemTK frm = new ThemTK();
+            //frm.Show();
         }
     }
 }

@@ -85,12 +85,21 @@ namespace MotelRoomManagement
             {
                 string sql = "Exec proc_XoaCacKhachThuocPhong " + idPhong;
                 int i = new HoadonBUS().XNDongTien2(sql);
+                //chuyển các hóa đơn của phong thành 4
+                sql = "Update tb_HoaDon Set TrangThaiHoaDon = 4 Where TrangThaiHoaDon !=4 And id_HoaDon_Phong = " + idPhong;
+                int j = new HoadonBUS().XNDongTien2(sql);
                 MessageBox.Show("Trả phòng thành công!!");
                 Load_listPhong();
 
             }
 
 
+        }
+
+        private void btnQuanLyViPham_Click(object sender, EventArgs e)
+        {
+            frmQLViPham frm = new frmQLViPham();
+            frm.Show();
         }
     }
 }

@@ -58,12 +58,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountInformation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AccountInformation.Designer.cs">
-      <DependentUpon>AccountInformation.cs</DependentUpon>
-    </Compile>
     <Compile Include="DoanhThu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -112,12 +106,6 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLoginOption.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLoginOption.Designer.cs">
-      <DependentUpon>frmLoginOption.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmNo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,11 +118,11 @@
     <Compile Include="frmQLNo_User.Designer.cs">
       <DependentUpon>frmQLNo_User.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSoftInfo.cs">
+    <Compile Include="frmQLViPham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSoftInfo.Designer.cs">
-      <DependentUpon>frmSoftInfo.cs</DependentUpon>
+    <Compile Include="frmQLViPham.Designer.cs">
+      <DependentUpon>frmQLViPham.cs</DependentUpon>
     </Compile>
     <Compile Include="frmThanhToanHoaDon_User.cs">
       <SubType>Form</SubType>
@@ -185,23 +173,11 @@
     <Compile Include="SapPhong.Designer.cs">
       <DependentUpon>SapPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="Test.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Test.Designer.cs">
-      <DependentUpon>Test.cs</DependentUpon>
-    </Compile>
     <Compile Include="ThemNguoi.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ThemNguoi.Designer.cs">
       <DependentUpon>ThemNguoi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ThemTK.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ThemTK.Designer.cs">
-      <DependentUpon>ThemTK.cs</DependentUpon>
     </Compile>
     <Compile Include="TinhTienThang.cs">
       <SubType>UserControl</SubType>
@@ -221,9 +197,6 @@
     <Compile Include="TraPhong.Designer.cs">
       <DependentUpon>TraPhong.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AccountInformation.resx">
-      <DependentUpon>AccountInformation.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DoanhThu.resx">
       <DependentUpon>DoanhThu.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,17 +222,14 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLoginOption.resx">
-      <DependentUpon>frmLoginOption.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmNo.resx">
       <DependentUpon>frmNo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQLNo_User.resx">
       <DependentUpon>frmQLNo_User.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSoftInfo.resx">
-      <DependentUpon>frmSoftInfo.cs</DependentUpon>
+    <EmbeddedResource Include="frmQLViPham.resx">
+      <DependentUpon>frmQLViPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThanhToanHoaDon_User.resx">
       <DependentUpon>frmThanhToanHoaDon_User.cs</DependentUpon>
@@ -290,14 +260,8 @@
     <EmbeddedResource Include="SapPhong.resx">
       <DependentUpon>SapPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Test.resx">
-      <DependentUpon>Test.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ThemNguoi.resx">
       <DependentUpon>ThemNguoi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ThemTK.resx">
-      <DependentUpon>ThemTK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TinhTienThang.resx">
       <DependentUpon>TinhTienThang.cs</DependentUpon>

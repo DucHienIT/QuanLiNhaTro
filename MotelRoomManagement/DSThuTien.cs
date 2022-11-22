@@ -50,7 +50,7 @@ namespace MotelRoomManagement
 
         private void LoadHoaDonThanhToanDuHoacQuaHan()
         {
-            string sql = "select * from vw_ThongTinHoaDon where IdHoaDon in (select IdHoaDon from tb_HoaDon where TrangThaiHoaDon = 3 Or (TrangThaiHoaDon In(1,2) And GETDATE() < NgayXuatHoaDon Or GETDATE() > KiHanThanhToan))";
+            string sql = "select * from vw_ThongTinHoaDon where IdHoaDon in (select IdHoaDon from tb_HoaDon where TrangThaiHoaDon = 3 Or TrangThaiHoaDon = 4 Or(TrangThaiHoaDon In(1,2) And GETDATE() < NgayXuatHoaDon Or GETDATE() > KiHanThanhToan))";
             Room ListLoai = new Room();
             var loaiphong = ListLoai.GetDataPhong(sql);
             for (int i = 0; i < loaiphong.Rows.Count; i++)

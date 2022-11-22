@@ -47,15 +47,19 @@ namespace MotelRoomManagement
 
                /* --1 là Quá kì hạn mà chưa thanh toán(giá trị mặc định của cột TrangThaiHoaDon)
                   --2 là Quá kì hạn mà chưa thanh toán đủ(số tiền thanh toán < SoTienPhaiThanhToanCua Hoa Don)
-                  --3 là Thanh toán đủ và trong kì hạn*/
+                  --3 là Thanh toán đủ và trong kì hạn
+                  --4 là hóa đơn của phòng đã trả hoặc đã bị đuổi nên không thanh toán được 
+               */
                 if (loaiphong.Rows[i][9].ToString().TrimEnd() == "1")
                 {
                     item.SubItems.Add("Chưa thanh toán");
                 }
                 else if (loaiphong.Rows[i][9].ToString().TrimEnd() == "2")
                     item.SubItems.Add("Chưa thanh toán đủ");
-                else
+                else if(loaiphong.Rows[i][9].ToString().TrimEnd() == "3")
                     item.SubItems.Add("Đã thanh toán đủ");
+                else
+                    item.SubItems.Add("Hóa đơn của những phòng trước");
                 listHoaDon.Items.Add(item);
             }
 

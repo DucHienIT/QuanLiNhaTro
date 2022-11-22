@@ -125,6 +125,18 @@ namespace MRDAO
             }
         }
 
+        public int ThucThiSql(string sql )
+        {
+            try
+            {
+                return dp.DExecuteNonQuery(sql, CommandType.Text);
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
        
     }
 }

@@ -419,7 +419,7 @@
             this.groupBox3.Size = new System.Drawing.Size(1256, 238);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Hóa đơn đã thanh toán đủ hoặc quá hạn";
+            this.groupBox3.Text = "Hóa đơn đã thanh toán đủ hoặc quá hạn và của cả các phòng đã trả";
             // 
             // lvHoaDonThanhToanDu
             // 

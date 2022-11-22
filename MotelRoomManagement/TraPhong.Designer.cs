@@ -43,6 +43,7 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.bar1 = new DevComponents.DotNetBar.Bar();
+            this.btnQuanLyViPham = new System.Windows.Forms.Button();
             this.groupPanel1.SuspendLayout();
             this.groupPanel5.SuspendLayout();
             this.groupPanel2.SuspendLayout();
@@ -299,10 +300,22 @@
             this.bar1.TabStop = false;
             this.bar1.Text = "bar1";
             // 
+            // btnQuanLyViPham
+            // 
+            this.btnQuanLyViPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuanLyViPham.Location = new System.Drawing.Point(713, 342);
+            this.btnQuanLyViPham.Name = "btnQuanLyViPham";
+            this.btnQuanLyViPham.Size = new System.Drawing.Size(253, 104);
+            this.btnQuanLyViPham.TabIndex = 2;
+            this.btnQuanLyViPham.Text = "Quản lý vi phạm";
+            this.btnQuanLyViPham.UseVisualStyleBackColor = true;
+            this.btnQuanLyViPham.Click += new System.EventHandler(this.btnQuanLyViPham_Click);
+            // 
             // TraPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnQuanLyViPham);
             this.Controls.Add(this.bar1);
             this.Controls.Add(this.groupPanel1);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -334,5 +347,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.Button btnQuanLyViPham;
     }
 }
