@@ -35,13 +35,19 @@
             this.ribbonTabItem2 = new DevComponents.DotNetBar.RibbonTabItem();
             this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBar12 = new DevComponents.DotNetBar.RibbonBar();
+            this.btnExit = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
+            this.btnTrangThai = new DevComponents.DotNetBar.ButtonItem();
+            this.btnDSTT = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonTabItem3 = new DevComponents.DotNetBar.RibbonTabItem();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
             this.styleManager2 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.tabIcon = new System.Windows.Forms.ImageList(this.components);
             this.ctmRM = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ctmCloseThis = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctmCloseOthers = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctmCloseAll = new System.Windows.Forms.ToolStripMenuItem();
             this.ribbonControl1 = new DevComponents.DotNetBar.RibbonControl();
             this.thongTinKhachTableAdapter1 = new MotelRoomManagement.QLPTTableAdapters.ThongTinKhachTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,12 +60,6 @@
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnExit = new DevComponents.DotNetBar.ButtonItem();
-            this.btnTrangThai = new DevComponents.DotNetBar.ButtonItem();
-            this.btnDSTT = new DevComponents.DotNetBar.ButtonItem();
-            this.ctmCloseThis = new System.Windows.Forms.ToolStripMenuItem();
-            this.ctmCloseOthers = new System.Windows.Forms.ToolStripMenuItem();
-            this.ctmCloseAll = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem5 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem6 = new DevComponents.DotNetBar.ButtonItem();
@@ -153,6 +153,16 @@
             // 
             this.ribbonBar12.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
+            // btnExit
+            // 
+            this.btnExit.Image = global::MotelRoomManagement.Properties.Resources.Button_exit_icon;
+            this.btnExit.ImageFixedSize = new System.Drawing.Size(54, 54);
+            this.btnExit.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnExit.Name = "btnExit";
+            this.btnExit.SubItemsExpandWidth = 14;
+            this.btnExit.Text = "<div width=\'120\' align =\"center\">Thoát chương trình</div>";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // ribbonBar1
             // 
             this.ribbonBar1.AutoOverflowEnabled = true;
@@ -184,6 +194,26 @@
             // 
             // 
             this.ribbonBar1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // btnTrangThai
+            // 
+            this.btnTrangThai.HoverImage = ((System.Drawing.Image)(resources.GetObject("btnTrangThai.HoverImage")));
+            this.btnTrangThai.Image = global::MotelRoomManagement.Properties.Resources.Calculator_icon;
+            this.btnTrangThai.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnTrangThai.Name = "btnTrangThai";
+            this.btnTrangThai.SubItemsExpandWidth = 14;
+            this.btnTrangThai.Text = "<div  align=\"center\" width=\'100\'>Thanh toán hóa đơn</div>";
+            this.btnTrangThai.Click += new System.EventHandler(this.btnTrangThai_Click);
+            // 
+            // btnDSTT
+            // 
+            this.btnDSTT.HoverImage = ((System.Drawing.Image)(resources.GetObject("btnDSTT.HoverImage")));
+            this.btnDSTT.Image = global::MotelRoomManagement.Properties.Resources.money_icon;
+            this.btnDSTT.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnDSTT.Name = "btnDSTT";
+            this.btnDSTT.SubItemsExpandWidth = 14;
+            this.btnDSTT.Text = "<div  align=\"center\"  width=\'120\'>Danh sách nợ</div>";
+            this.btnDSTT.Click += new System.EventHandler(this.btnDSTT_Click);
             // 
             // ribbonTabItem3
             // 
@@ -228,6 +258,28 @@
             this.ctmCloseAll});
             this.ctmRM.Name = "contextMenuStrip1";
             this.ctmRM.Size = new System.Drawing.Size(219, 82);
+            // 
+            // ctmCloseThis
+            // 
+            this.ctmCloseThis.Image = global::MotelRoomManagement.Properties.Resources.App_x_icon;
+            this.ctmCloseThis.Name = "ctmCloseThis";
+            this.ctmCloseThis.ShortcutKeys = System.Windows.Forms.Keys.F12;
+            this.ctmCloseThis.Size = new System.Drawing.Size(218, 26);
+            this.ctmCloseThis.Text = "Đóng trang này";
+            // 
+            // ctmCloseOthers
+            // 
+            this.ctmCloseOthers.Image = global::MotelRoomManagement.Properties.Resources.Windows_Close_Program_icon;
+            this.ctmCloseOthers.Name = "ctmCloseOthers";
+            this.ctmCloseOthers.Size = new System.Drawing.Size(218, 26);
+            this.ctmCloseOthers.Text = "Đóng các trang khác";
+            // 
+            // ctmCloseAll
+            // 
+            this.ctmCloseAll.Image = global::MotelRoomManagement.Properties.Resources.Button_Close_icon;
+            this.ctmCloseAll.Name = "ctmCloseAll";
+            this.ctmCloseAll.Size = new System.Drawing.Size(218, 26);
+            this.ctmCloseAll.Text = "Đóng tất cả";
             // 
             // ribbonControl1
             // 
@@ -277,12 +329,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(349, 197);
+            this.label1.Location = new System.Drawing.Point(143, 197);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(574, 59);
+            this.label1.Size = new System.Drawing.Size(1042, 59);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Danh sách khách trọ";
+            this.label1.Text = "Danh sách khách trọ thuộc phòng bạn";
             // 
             // listKhach
             // 
@@ -347,58 +399,6 @@
             // columnHeader5
             // 
             this.columnHeader5.Text = "Mã phòng";
-            // 
-            // btnExit
-            // 
-            this.btnExit.Image = global::MotelRoomManagement.Properties.Resources.Button_exit_icon;
-            this.btnExit.ImageFixedSize = new System.Drawing.Size(54, 54);
-            this.btnExit.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnExit.Name = "btnExit";
-            this.btnExit.SubItemsExpandWidth = 14;
-            this.btnExit.Text = "<div width=\'120\' align =\"center\">Thoát chương trình</div>";
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnTrangThai
-            // 
-            this.btnTrangThai.HoverImage = ((System.Drawing.Image)(resources.GetObject("btnTrangThai.HoverImage")));
-            this.btnTrangThai.Image = global::MotelRoomManagement.Properties.Resources.Calculator_icon;
-            this.btnTrangThai.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnTrangThai.Name = "btnTrangThai";
-            this.btnTrangThai.SubItemsExpandWidth = 14;
-            this.btnTrangThai.Text = "<div  align=\"center\" width=\'100\'>Thanh toán hóa đơn</div>";
-            this.btnTrangThai.Click += new System.EventHandler(this.btnTrangThai_Click);
-            // 
-            // btnDSTT
-            // 
-            this.btnDSTT.HoverImage = ((System.Drawing.Image)(resources.GetObject("btnDSTT.HoverImage")));
-            this.btnDSTT.Image = global::MotelRoomManagement.Properties.Resources.money_icon;
-            this.btnDSTT.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnDSTT.Name = "btnDSTT";
-            this.btnDSTT.SubItemsExpandWidth = 14;
-            this.btnDSTT.Text = "<div  align=\"center\"  width=\'120\'>Danh sách nợ</div>";
-            this.btnDSTT.Click += new System.EventHandler(this.btnDSTT_Click);
-            // 
-            // ctmCloseThis
-            // 
-            this.ctmCloseThis.Image = global::MotelRoomManagement.Properties.Resources.App_x_icon;
-            this.ctmCloseThis.Name = "ctmCloseThis";
-            this.ctmCloseThis.ShortcutKeys = System.Windows.Forms.Keys.F12;
-            this.ctmCloseThis.Size = new System.Drawing.Size(218, 26);
-            this.ctmCloseThis.Text = "Đóng trang này";
-            // 
-            // ctmCloseOthers
-            // 
-            this.ctmCloseOthers.Image = global::MotelRoomManagement.Properties.Resources.Windows_Close_Program_icon;
-            this.ctmCloseOthers.Name = "ctmCloseOthers";
-            this.ctmCloseOthers.Size = new System.Drawing.Size(218, 26);
-            this.ctmCloseOthers.Text = "Đóng các trang khác";
-            // 
-            // ctmCloseAll
-            // 
-            this.ctmCloseAll.Image = global::MotelRoomManagement.Properties.Resources.Button_Close_icon;
-            this.ctmCloseAll.Name = "ctmCloseAll";
-            this.ctmCloseAll.Size = new System.Drawing.Size(218, 26);
-            this.ctmCloseAll.Text = "Đóng tất cả";
             // 
             // buttonItem2
             // 

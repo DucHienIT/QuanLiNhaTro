@@ -62,6 +62,9 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lbTienConLai = new System.Windows.Forms.Label();
+            this.lbTCL = new System.Windows.Forms.Label();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox6.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
@@ -103,7 +106,8 @@
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader2,
-            this.columnHeader1});
+            this.columnHeader1,
+            this.columnHeader4});
             this.listHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listHoaDon.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listHoaDon.FullRowSelect = true;
@@ -361,6 +365,8 @@
             // 
             // grCTHD
             // 
+            this.grCTHD.Controls.Add(this.lbTCL);
+            this.grCTHD.Controls.Add(this.lbTienConLai);
             this.grCTHD.Controls.Add(this.lbTT2);
             this.grCTHD.Controls.Add(this.lbTT);
             this.grCTHD.Controls.Add(this.line1);
@@ -374,7 +380,7 @@
             this.grCTHD.Margin = new System.Windows.Forms.Padding(4);
             this.grCTHD.Name = "grCTHD";
             this.grCTHD.Padding = new System.Windows.Forms.Padding(4);
-            this.grCTHD.Size = new System.Drawing.Size(431, 391);
+            this.grCTHD.Size = new System.Drawing.Size(431, 416);
             this.grCTHD.TabIndex = 5;
             this.grCTHD.TabStop = false;
             this.grCTHD.Text = "Chi tiết hóa đơn số:";
@@ -509,6 +515,31 @@
             this.textBox1.Size = new System.Drawing.Size(328, 49);
             this.textBox1.TabIndex = 0;
             // 
+            // lbTienConLai
+            // 
+            this.lbTienConLai.AutoSize = true;
+            this.lbTienConLai.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTienConLai.ForeColor = System.Drawing.Color.Red;
+            this.lbTienConLai.Location = new System.Drawing.Point(17, 383);
+            this.lbTienConLai.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTienConLai.Name = "lbTienConLai";
+            this.lbTienConLai.Size = new System.Drawing.Size(150, 29);
+            this.lbTienConLai.TabIndex = 6;
+            this.lbTienConLai.Text = "Tiền còn lại: ";
+            // 
+            // lbTCL
+            // 
+            this.lbTCL.AutoSize = true;
+            this.lbTCL.Location = new System.Drawing.Point(178, 383);
+            this.lbTCL.Name = "lbTCL";
+            this.lbTCL.Size = new System.Drawing.Size(0, 29);
+            this.lbTCL.TabIndex = 7;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Số tiền còn lại";
+            this.columnHeader4.Width = 168;
+            // 
             // frmThanhToanHoaDon_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -573,5 +604,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label lbTT2;
+        private System.Windows.Forms.Label lbTCL;
+        private System.Windows.Forms.Label lbTienConLai;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }
