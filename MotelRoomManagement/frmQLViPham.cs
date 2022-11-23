@@ -60,7 +60,7 @@ namespace MotelRoomManagement
             dgPhongNoHonBaTrieu.Columns[4].Name = "Nợ hiện tại";
 
             //chỉ load các phòng không có khách trọ vì khách trọ rời đi thì phòng đó đã phải hết nợ
-            string sql = "Select *, dbo.func_NoPhong(p.IdPhong) 'Nợ' From tb_Phong p Where dbo.func_NoPhong(p.IdPhong) > 10000 And p.id_Phong_TrangThaiPhong In(2,3)";
+            string sql = "Select *, dbo.func_NoPhong(p.IdPhong) 'Nợ' From tb_Phong p Where dbo.func_NoPhong(p.IdPhong) > 2000000 And p.id_Phong_TrangThaiPhong In(2,3)";
             var dsphong = new Room().GetDataPhong(sql);
 
             for (int i = 0; i < dsphong.Rows.Count; i++)

@@ -19,6 +19,11 @@ namespace MRDAO
             dp = new DataProvider();
         }
 
+        public KhachTroDAO(string connString)
+        {
+            dp = new DataProvider(connString);
+        }
+
         public List<tb_KhachTro> GetKhachThue(string sql)
         {
             List<tb_KhachTro> list = new List<tb_KhachTro>();

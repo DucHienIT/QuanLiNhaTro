@@ -16,11 +16,13 @@ namespace MotelRoomManagement
         int idPhongThanhToan, idKhachThanhToan;
         int idHoaDon;
         decimal tongTien,tienConLai;
-        public frmThanhToanHoaDon_User(int idPhong, int idKhach)
+        string connString;
+        public frmThanhToanHoaDon_User(int idPhong, int idKhach,string connString)
         {
             InitializeComponent();
             idPhongThanhToan = idPhong;
             idKhachThanhToan = idKhach;
+            this.connString = connString;
         }
 
        
@@ -34,14 +36,14 @@ namespace MotelRoomManagement
         {
 
             listHoaDon.Items.Clear();
-            string sql = "Select * from tb_HoaDon where tb_HoaDon.id_HoaDon_Phong = " + idPhongThanhToan;
-            Room ListLoai = new Room();
-            var loaiphong = ListLoai.GetDataPhong(sql);
+            string sql = "Select vw.MaHoaDon,vw.NgayXuatHoaDon,vw.TongTienPhaiThanhToan,vw.KiHanThanhToan,vw.TrangThaiHoaDon,vw.SoTienConLaiPhaiThanhToan from vw_ThongTinHoaDon vw Where vw.id_HoaDon_Phong = " + idPhongThanhToan;
+            Room ListLoai = new Room(connString);
+            var loaiphong = ListLoai.GetDataPhongConnString(sql);
             for (int i = 0; i < loaiphong.Rows.Count; i++)
             {
-                ListViewItem item = new ListViewItem(loaiphong.Rows[i][8].ToString().TrimEnd());
-                item.SubItems.Add(loaiphong.Rows[i][2].ToString().TrimEnd());
-                item.SubItems.Add(string.Format("{0:#,##0}", Int32.Parse(loaiphong.Rows[i][7].ToString().TrimEnd())));
+                ListViewItem item = new ListViewItem(loaiphong.Rows[i][0].ToString().TrimEnd());
+                item.SubItems.Add(loaiphong.Rows[i][1].ToString().TrimEnd());
+                item.SubItems.Add(string.Format("{0:#,##0}", Int32.Parse(loaiphong.Rows[i][2].ToString().TrimEnd())));
                 item.SubItems.Add(loaiphong.Rows[i][3].ToString().TrimEnd());
 
 
@@ -50,17 +52,17 @@ namespace MotelRoomManagement
                   --3 là Thanh toán đủ và trong kì hạn
                   --4 là hóa đơn của phòng đã trả hoặc đã bị đuổi nên không thanh toán được 
                */
-                if (loaiphong.Rows[i][9].ToString().TrimEnd() == "1")
+                if (loaiphong.Rows[i][4].ToString().TrimEnd() == "1")
                 {
                     item.SubItems.Add("Chưa thanh toán");
                 }
-                else if (loaiphong.Rows[i][9].ToString().TrimEnd() == "2")
+                else if (loaiphong.Rows[i][4].ToString().TrimEnd() == "2")
                     item.SubItems.Add("Chưa thanh toán đủ");
-                else if(loaiphong.Rows[i][9].ToString().TrimEnd() == "3")
+                else if(loaiphong.Rows[i][4].ToString().TrimEnd() == "3")
                     item.SubItems.Add("Đã thanh toán đủ");
                 else
                     item.SubItems.Add("Hóa đơn của những phòng trước");
-                item.SubItems.Add(string.Format("{0:#,##0}", Int32.Parse(loaiphong.Rows[i][6].ToString().TrimEnd())));
+                item.SubItems.Add(string.Format("{0:#,##0}", Int32.Parse(loaiphong.Rows[i][5].ToString().TrimEnd())));
                 listHoaDon.Items.Add(item);
             }
 
@@ -89,9 +91,10 @@ namespace MotelRoomManagement
         private void listHoaDon_Click(object sender, EventArgs e)
         {
             ListViewItem item = listHoaDon.SelectedItems[0];
-            string thang = item.Text;
-            string sql = "SELECT hd.IdHoaDon,lp.LoaiPhong, dg.DonGia, hd.SoDien, hd.SoNuoc, hd.TongTienPhaiThanhToan , hd.TrangThaiHoaDon, hd.SoTienConLaiPhaiThanhToan FROM tb_HoaDon hd, tb_DonGiaPhong dg, tb_Phong p, tb_LoaiPhong lp WHERE hd.MaHoaDon = N'" + thang + "' AND p.IdPhong = hd.id_HoaDon_Phong AND p.id_Phong_DonGia = dg.IdDonGiaPhong AND lp.IdLoaiPhong = dg.id_DonGia_LoaiPhong ";
-            DataTable table = new Room().GetDataPhong(sql);
+            string thang = item.Text;//thang laf ma hoa don
+            
+            string sql = "Select vwhd.IdHoaDon,vwdg.LoaiPhong,vwdg.DonGia,vwhd.SoDien,vwhd.SoNuoc,vwhd.TongTienPhaiThanhToan,vwhd.TrangThaiHoaDon,vwhd.SoTienConLaiPhaiThanhToan From vw_ThongTinHoaDon vwhd ,vw_ThongTinDonGiaPhong vwdg Where vwhd.id_Phong_DonGia = vwdg.IdDonGiaPhong And vwhd.MaHoaDon = N'" + thang + "'";
+            DataTable table = new Room(connString).GetDataPhongConnString(sql);
             for (int i = 0; i < table.Rows.Count; i++)
             {
                 grCTHD.Text = "Chi tiết hóa đơn số: " + table.Rows[i][0].ToString().TrimEnd();
@@ -135,11 +138,19 @@ namespace MotelRoomManagement
             }
             else
             {
-                if(Convert.ToDecimal(textBox1.Text.ToString().TrimEnd()) < tienConLai)
-                    MessageBox.Show("Thanh toán ít hơn số tiền còn lại(thanh toán một phần)");
-                else if (Convert.ToDecimal(textBox1.Text.ToString().TrimEnd()) > tienConLai)
-                    MessageBox.Show("Thanh toán nhiều hơn số tiền còn lại(thanh toán luôn nợ tồn)");
-                soTienTra = Convert.ToDecimal(textBox1.Text.ToString().TrimEnd());
+                try
+                {
+                    if(Convert.ToDecimal(textBox1.Text.ToString().TrimEnd()) < tienConLai)
+                        MessageBox.Show("Thanh toán ít hơn số tiền còn lại(thanh toán một phần)");
+                    else if (Convert.ToDecimal(textBox1.Text.ToString().TrimEnd()) > tienConLai)
+                        MessageBox.Show("Thanh toán nhiều hơn số tiền còn lại(thanh toán luôn nợ tồn)");
+                    soTienTra = Convert.ToDecimal(textBox1.Text.ToString().TrimEnd());
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message,"Lỗi", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    return;
+                }
             }
 
             string ngaythu = DateTime.Today.ToShortDateString();

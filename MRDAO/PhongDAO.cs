@@ -19,6 +19,12 @@ namespace MRDAO
         {
             dp = new DataProvider();
         }
+
+        public PhongDAO(string connString)
+        {
+            dp = new DataProvider(connString);
+        }
+
         public List<tb_Phong> GetPhong(string sql)
         {
             List<tb_Phong> list = new List<tb_Phong>();

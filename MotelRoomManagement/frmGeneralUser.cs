@@ -39,8 +39,9 @@ namespace MotelRoomManagement
                 loadKhach();
                 conn.Close();
             }
-            catch
+            catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
                 this.Close();
             }
             
@@ -48,9 +49,9 @@ namespace MotelRoomManagement
         void loadKhach()
         {
             listKhach.Items.Clear();
-            KhachTroBUS _ListKT = new KhachTroBUS();
-            string sql = "Select tb_KhachTro.MaKhachTro AS [Mã khách],CCCD, HoTen AS [Họ và tên], SoDienThoai AS [Số điện thoại], NamSinh AS [Năm Sinh], QueQuan , NgheNghiep, id_KhachTro_Phong AS [Mã phòng], IdKhachTro From tb_KhachTro, tb_Phong Where tb_KhachTro.id_KhachTro_Phong = tb_Phong.IdPhong AND  tb_KhachTro.id_KhachTro_Phong in (Select tb_KhachTro.id_KhachTro_Phong from tb_KhachTro where tb_KhachTro.TenDangNhap = N'" + tendangnhap + "')";
-            var list_khach = _ListKT.GetKhachTheoMaPhong(sql);
+            KhachTroBUS _ListKT = new KhachTroBUS(connString);
+            string sql = "Select kt.MaKhachTro AS [Mã khách],CCCD, HoTen AS [Họ và tên], SoDienThoai AS [Số điện thoại], NamSinh AS [Năm Sinh], QueQuan , NgheNghiep, id_KhachTro_Phong AS [Mã phòng], IdKhachTro From tb_KhachTro kt Where kt.id_KhachTro_Phong in (Select tb_KhachTro.id_KhachTro_Phong from tb_KhachTro where tb_KhachTro.TenDangNhap = N'" + tendangnhap + "')";
+            var list_khach = _ListKT.GetKhachTheoMaPhongConnStr(sql);
 
             idPhong = int.Parse(list_khach.Rows[0][7].ToString());
             idKhach = int.Parse(list_khach.Rows[0][8].ToString());
@@ -74,13 +75,13 @@ namespace MotelRoomManagement
 
         private void btnTrangThai_Click(object sender, EventArgs e)
         {
-            frmThanhToanHoaDon_User frm = new frmThanhToanHoaDon_User(idPhong, idKhach);
+            frmThanhToanHoaDon_User frm = new frmThanhToanHoaDon_User(idPhong, idKhach,connString);
             frm.ShowDialog();
         }
 
         private void btnDSTT_Click(object sender, EventArgs e)
         {
-            frmQLNo_User frn = new frmQLNo_User(idPhong);
+            frmQLNo_User frn = new frmQLNo_User(idPhong,connString);
             frn.Show();
         }
 

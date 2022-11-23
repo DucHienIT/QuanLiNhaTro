@@ -14,10 +14,12 @@ namespace MotelRoomManagement
     public partial class frmQLNo_User : Form
     {
         int idPhong;
-        public frmQLNo_User(int idPhong)
+        string connString;
+        public frmQLNo_User(int idPhong, string connString)
         {
             InitializeComponent();
             this.idPhong = idPhong;
+            this.connString = connString;
         }
 
 
@@ -30,8 +32,8 @@ namespace MotelRoomManagement
             dgvQLLP.Columns[1].Name = "Mã Nợ";
             dgvQLLP.Columns[2].Name = "Tổng số nợ";
 
-            string sql = "SELECT tb_Phong.MaPhong, tb_ThongTinNo.MaThongTinNo, tb_ThongTinNo.SoTienNo From tb_ThongTinNo, tb_Phong where tb_ThongTinNo.id_ThongTinNo_Phong = tb_Phong.IdPhong AND tb_Phong.IdPhong = " + idPhong;
-            var dsphong = new Room().GetDataPhong(sql);
+            string sql = "Select Distinct vw.MaPhong,vw.MaThongTinNo,vw.SoTienNo From vw_ThongTinHoaDon vw Where vw.idPhong = " + idPhong;
+            var dsphong = new Room(this.connString).GetDataPhongConnString(sql);
 
             for (int i = 0; i < dsphong.Rows.Count; i++)
             {
@@ -52,11 +54,18 @@ namespace MotelRoomManagement
 
         private void dgvQLLP_SelectionChanged(object sender, EventArgs e)
         {
+            try
+            {
+                DataGridViewRow currRow = dgvQLLP.CurrentRow;
+                txtMaPhong.Text = currRow.Cells[0].Value.ToString();
+                txtMaNo.Text = currRow.Cells[1].Value.ToString();
+                txtSoNo.Text = currRow.Cells[2].Value.ToString();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
-            DataGridViewRow currRow = dgvQLLP.CurrentRow;
-            txtMaPhong.Text = currRow.Cells[0].Value.ToString();
-            txtMaNo.Text = currRow.Cells[1].Value.ToString();
-            txtSoNo.Text = currRow.Cells[2].Value.ToString();
         }
     }
 }

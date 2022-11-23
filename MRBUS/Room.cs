@@ -13,6 +13,11 @@ namespace MRBUS
 {
     public class Room
     {
+        string connString;
+        
+        public Room() { }
+
+        public Room(string connString) { this.connString = connString; }
  
         public DataTable GetDataTWChild(string trangthai)
         {
@@ -44,6 +49,18 @@ namespace MRBUS
             }
         }
 
+        public DataTable GetDataPhongConnString(string sql)
+        {
+            try
+            {
+                DataTable result = new PhongDAO(connString).GetDataPhong(sql);
+                return result;
+            }
+            catch (SqlException ex)
+            {
 
+                throw ex;
+            }
+        }
     }
 }

@@ -12,6 +12,18 @@ namespace MRBUS
 {
     public class KhachTroBUS
     {
+        private String connString;
+
+        public KhachTroBUS(string connString)
+        {
+            this.connString = connString;
+        }
+
+        public KhachTroBUS()
+        {
+
+        }
+
         public List<tb_KhachTro> GetKhach_List(string sql)
         {
             try
@@ -46,6 +58,20 @@ namespace MRBUS
             try
             {
                 DataTable result = new KhachTroDAO().GetDataChung(sql);
+                return result;
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public DataTable GetKhachTheoMaPhongConnStr(string sql)
+        {
+            try
+            {
+                DataTable result = new KhachTroDAO(connString).GetDataChung(sql);
                 return result;
             }
             catch (SqlException ex)
