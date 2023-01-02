@@ -147,7 +147,7 @@ namespace MotelRoomManagement
                 tendangnhap = txtTenDangNhap.Text.Trim();
 
 
-                MessageBox.Show(namsinh.ToString());
+               // MessageBox.Show(namsinh.ToString());
                 tb_KhachTro kt = new tb_KhachTro(cccd, hoten, sdt, namsinh, quequan, nghenghiep, idPhong, tendangnhap);
 
                 KhachTroBUS khachtro = new KhachTroBUS();
@@ -163,7 +163,7 @@ namespace MotelRoomManagement
                     string sql = "EXEC dbo.proc_ThemKhachTro @CCCD, @HoTen, @SoDienThoai, @NamSinh, @QueQuan, @NgheNghiep, @id_KhachTro_Phong, @TenDangNhap, N'" + txtPass.Text + "'";
                     khachtro.Insert(sql, kt);
                 }
-
+                lvPhong.Items.Clear();
                 LoadData_ListPhong();
 
             }
