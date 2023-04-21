@@ -30,7 +30,11 @@ This application is built in C# using Windows Forms for the user interface. It u
 
 ## Contributors
 
-This application was developed by [Your Name]. If you encounter any bugs or have suggestions for new features, please submit a GitHub issue or contact me directly.
+This application was developed by :
+- Nguyen Duc Hien
+- Nguyen Duc Thinh
+- Pham Quang Huy
+- Ho Thanh Danh
 
 ## License
 
